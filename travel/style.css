@@ -55,10 +55,11 @@ h1 {
   color: #fff;
   font-size: 35px;
 }
-.rateBtn {
+/* #rateBtn {
   color: #000;
   font-size: 20px;
-}
+  display: inline-block;
+} */
 p {
   color: #fff;
   font-size: 20px;
@@ -129,3 +130,18 @@ button {
    text-shadow:  0 0 5px #000;
    font-size: 8px;
  }
+ #qrCode {
+  display: none;
+  position: absolute;
+  /* 根据实际情况调整位置 */
+  left: 100px;
+  top: 50px;
+}
+
+/* 鼠标悬停在这个元素上时显示二维码图片 */
+#rateBtn:hover + #qrCode {
+  display: block;
+  color: #000;
+  font-size: 20px;
+  display: inline-block;
+}
