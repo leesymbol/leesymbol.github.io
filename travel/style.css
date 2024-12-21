@@ -48,7 +48,7 @@ nav ul li a {
   align-items: center;
 }
 .col {
-  flex-basis:70%;
+  flex-basis:75%;
   /* padding-left:200px; */
 }
 h1 {
