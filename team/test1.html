@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Button Click Example</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <div id="postList"></div>
+</head>
+<!-- <body>
+    <button id="btn2">使用Axios发送Get请求</button>
+    <script>
+    document.querySelector("#btn2").addEventListener("click",function (params) {
+            var url = "https://jsonplaceholder.typicode.com/posts";
+            var paramsdata = {};
+            axios({
+                url:url,
+                method:'GET',
+                params:paramsdata
+            }).then(function (res) {
+                const postListElement = document.getElementById('postList');
+                res.data.forEach(post => {
+                const postDiv = document.createElement('div');
+                postDiv.innerHTML = `
+                    <h3>${post.title}</h3>
+                    <p>${post.body}</p>
+                    <hr>
+                `;
+                postListElement.appendChild(postDiv);
+                });
+            }).catch(function (error) {
+                console.log(error);
+            });
+        });
+    </script>
+</body> -->
+<body>
+    <button id="btn2">使用Axios发送Get请求</button>
+    <script>
+    document.querySelector("#btn2").addEventListener("click",function (params) {
+            var url = "http://v.juhe.cn/todayOnhistory/queryEvent";
+            var paramsdata = {};
+            axios({
+                url:url,
+                method:'GET',
+                headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+                },
+            }).then(function (res) {
+                const postListElement = document.getElementById('postList');
+                res.data.forEach(post => {
+                const postDiv = document.createElement('div');
+                postDiv.innerHTML = `
+                    <h3>${post.title}</h3>
+                    <p>${post.body}</p>
+                    <hr>
+                `;
+                postListElement.appendChild(postDiv);
+                });
+            }).catch(function (error) {
+                console.log(error);
+            });
+        });
+    </script>
+</body>
+</html>
