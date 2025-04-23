@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自我简介</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        /* 全局布局：使用 Flexbox 保证 Footer 始终在页面底部 */
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 主体内容区域，灵活扩展 */
+        .container {
+            flex: 1;
+            padding-bottom: 50px; /* 防止 footer 遮挡 */
+            padding: 20px;
+        }
+
+        /* 页面内容区域样式 */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #4CAF50;
+        }
+        .content {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .images img {
+            width: 100%;
+            height: auto;
+            max-width: 400px;
+            margin: 10px;
+            border-radius: 8px;
+        }
+        .images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .link {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Footer样式 */
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* 按钮样式 */
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* 数据展示区域 */
+        #dataContainer {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            max-height: 400px;
+            overflow-y: scroll;
+        }
+        .user-info {
+            margin-bottom: 15px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+        .user-info h3 {
+            margin: 0;
+            color: #4CAF50;
+        }
+        .user-info p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>自我简介</h1>
+</header>
+
+<div class="container">
+
+    <section>
+        <h2 class="section-title">关于我</h2>
+        <p class="content">
+            大家好，我是韩文龙，一名热衷于前端技术、移动端开发以及小程序开发的技术爱好者。在学习和工作中，我积累了丰富的前后端开发经验，致力于构建高效、简洁、易维护的项目。
+        </p>
+        <p class="content">
+            我特别喜欢前端开发，尤其是利用现代的 JavaScript 框架（如 React 和 Vue）打造交互式界面。同时，我也对移动端开发和小程序开发充满兴趣，擅长使用 Flutter、React Native 以及 WeChat 小程序进行跨平台应用开发。
+        </p>
+        <p class="content">
+            我的优势在于扎实的编程基础，良好的逻辑思维能力以及对技术的持续学习和探索。我始终相信，技术的不断进步能够带来更高效、更有趣的开发体验。
+        </p>
+    </section>
+
+    <section>
+        <h2 class="section-title">技术方向</h2>
+        <ul class="content">
+            <li>前端开发（HTML, CSS, JavaScript, React, Vue）</li>
+            <li>移动端开发（Flutter, React Native）</li>
+            <li>小程序开发（WeChat 小程序）</li>
+            <li>后端开发（Node.js, Express, MongoDB）</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2 class="section-title">项目经验</h2>
+        <p class="content">
+            在过去的项目中，我参与了多个 Web 和移动端应用的开发，能够独立完成从需求分析、系统设计到开发、测试和部署的完整过程。我在团队合作中注重沟通和协作，能够快速解决问题，提升开发效率。
+        </p>
+    </section>
+
+    <section class="images">
+        <h2 class="section-title">我的作品展示</h2>
+        <img src="1.jpg" alt="作品图1">
+        <img src="2.jpg" alt="作品图2">
+        <img src="3.jpg" alt="作品图3">
+        <img src="4.jpg" alt="作品图4">
+    </section>
+
+    <section>
+        <h2 class="section-title">联系我</h2>
+        <p class="content">
+            如果您对我的工作或项目感兴趣，欢迎随时联系我！
+        </p>
+        <p class="content">
+            <a href="mailto:zhangsan@example.com" class="link">点击这里发送邮件</a>
+        </p>
+    </section>
+
+    <!-- 按钮区域 -->
+    <button id="loadUsersBtn">加载用户数据 (GET 请求)</button>
+    <button id="loadPostsBtn">加载帖子数据 (POST 请求)</button>
+
+    <!-- 数据展示区域 -->
+    <div id="dataContainer"></div>
+
+</div>
+
+<footer>
+    <p>&copy; 2024 韩文龙 | 所有权利保留</p>
+</footer>
+
+<script>
+// 获取按钮和展示区域的元素
+const loadUsersBtn = document.getElementById('loadUsersBtn');
+const loadPostsBtn = document.getElementById('loadPostsBtn');
+const dataContainer = document.getElementById('dataContainer');
+
+// 请求数据并展示
+async function fetchData(url, method = 'GET', data = {}) {
+    try {
+        const response = await axios({
+            method: method,
+            url: url,
+            data: data // 这里可以传递 POST 请求的请求体数据
+        });
+        const resultData = response.data;
+
+        // 清空之前的数据
+        dataContainer.innerHTML = '';
+
+        // 格式化并展示数据
+        if (Array.isArray(resultData)) {
+            // 处理用户数据，GET 请求返回数组
+            resultData.forEach(item => {
+                const userDiv = document.createElement('div');
+                userDiv.classList.add('user-info');
+
+                userDiv.innerHTML = `
+                    <h3>姓名: ${item.name}</h3>
+                    <p><strong>手机号:</strong> ${item.phone}</p>
+                    <p><strong>用户名:</strong> ${item.username}</p>
+                    <p><strong>网站:</strong> <a href="http://${item.website}" target="_blank">${item.website}</a></p>
+                    <p><strong>Email:</strong> ${item.email}</p>
+                    <p><strong>公司名称:</strong> ${item.company.name}</p>
+                    <p><strong>地址:</strong> ${item.address.city}, ${item.address.street}, ${item.address.suite}</p>
+                `;
+                dataContainer.appendChild(userDiv);
+            });
+        } else if (resultData.id) {
+            // 处理POST请求返回的数据，返回的格式包含 id
+            const postDiv = document.createElement('div');
+            postDiv.style.marginBottom = '10px';
+            postDiv.style.padding = '10px';
+            postDiv.style.border = '1px solid #ddd';
+            postDiv.style.backgroundColor = '#f9f9f9';
+
+            postDiv.innerHTML = `
+                <strong>用户数据:</strong><br>
+                <p><strong>姓名:</strong> ${resultData.name}</p>
+                <p><strong>手机号:</strong> ${resultData.phone}</p>
+                <p><strong>用户名:</strong> ${resultData.username}</p>
+                <p><strong>网站:</strong> <a href="http://${resultData.website}" target="_blank">${resultData.website}</a></p>
+                <p><strong>Email:</strong> ${resultData.email}</p>
+                <p><strong>公司名称:</strong> ${resultData.company.name}</p>
+                <p><strong>地址:</strong> ${resultData.address.city}, ${resultData.address.street}, ${resultData.address.suite}</p>
+                <p><strong>POST 请求返回的 ID:</strong> ${resultData.id}</p>
+            `;
+            dataContainer.appendChild(postDiv);
+        }
+    } catch (error) {
+        console.error('请求失败:', error);
+        dataContainer.innerHTML = '<p>数据加载失败，请稍后再试。</p>';
+    }
+}
+
+// 事件监听器：点击按钮加载不同的接口数据
+loadUsersBtn.addEventListener('click', function() {
+    // 加载用户数据，使用 GET 请求
+    fetchData('https://jsonplaceholder.typicode.com/users', 'GET');
+});
+
+loadPostsBtn.addEventListener('click', function() {
+    // 加载帖子数据，使用 POST 请求
+    const postData = {
+        name: 'John Doe',  // 随意设定参数
+        phone: '123-456-7890',
+        username: 'john_doe',
+        website: 'example.com',
+        email: 'john@example.com',
+        company: { name: 'Example Corp' },
+        address: { city: 'City', street: '123 Street', suite: 'Apt 1' }
+    };
+    fetchData('https://jsonplaceholder.typicode.com/posts', 'POST', postData);
+});
+</script>
+
+</body>
+</html>

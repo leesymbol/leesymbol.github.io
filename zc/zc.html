@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简介</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+       .container {
+            width: 80%;
+            margin: auto;
+            padding: 2rem;
+            background-color: white;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+       .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+       .image-grid img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>个人简介</h1>
+    </header>
+    <div class="container">
+        <h2>个人信息</h2>
+        <p>我叫[张超]，是一名对技术充满热情的学习者，目前专注于政务云领域，同时也在探索网络安全的奥秘。</p>
+        <h2>技术优势</h2>
+        <p>在政务云方面，我熟练掌握 各类设备操作。
+        <p>对于网络安全，尽可能的去了解学习网络安全实操和实用性。</p>
+        <h2>兴趣爱好</h2>
+        <p>除了工作，我还喜欢打球。</p>
+        <h2>图片展示</h2>
+        <div class="image-grid">
+            <img src="img/image1.jpg" alt="图片 1">
+            <img src="img/image2.jpg" alt="图片 2">
+            <img src="img/image3.jpg" alt="图片 3">
+            <img src="img/image4.jpg" alt="图片 4">
+        </div>
+    </div>
+    <footer>
+        <p>&copy; [张超] 2024</p>
+    </footer>
+</body>
+
+</html>

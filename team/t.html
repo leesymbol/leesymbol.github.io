@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二维码悬停显示示例</title>
+    <style>
+        /* 隐藏二维码图片，初始状态不显示 */
+        #qrCode {
+            display: none;
+            position: absolute;
+            /* 根据实际情况调整位置 */
+            left: 100px;
+            top: 50px;
+        }
+
+        /* 鼠标悬停在这个元素上时显示二维码图片 */
+        #hoverText:hover + #qrCode {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 创建一个用于触发悬停效果的文本元素 -->
+    <p id="hoverText">鼠标悬停此处显示二维码</p>
+    <!-- 二维码图片元素，替换src中的路径为你实际的二维码图片路径 -->
+    <img src="../travel/img/xjj.png" alt="二维码" id="qrCode">
+</body>
+
+</html>
