@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>德州财金集团 - 活动中心</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<style>
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    @font-face {
+      font-family: 'SerifFont';
+      src: local('SimSun'), local('Songti SC');
+    }
+  </style>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'chinese-red': '#C42B1C',
+            'luxury-gold': '#D4AF37',
+            'deep-red': '#8B0000',
+            'cream-white': '#F8F4E9'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-amber-50 flex justify-center items-center min-h-screen p-4">
+<div class="w-[375px] h-[812px] bg-white border-4 border-luxury-gold rounded-2xl shadow-2xl overflow-hidden flex flex-col">
+<!-- 顶部标题栏 -->
+<header class="h-14 bg-chinese-red flex items-center justify-between px-4">
+<div class="flex items-center">
+<iconify-icon class="text-amber-300 text-2xl cursor-pointer" icon="mdi:chevron-left" id="back-btn"></iconify-icon>
+<!-- <iconify-icon class="text-amber-300 text-2xl" icon="mdi:bank"></iconify-icon>
+<span class="text-white font-serif font-bold text-xl ml-2">德州财金集团</span> -->
+</div>
+<div class="flex space-x-3">
+<iconify-icon class="text-amber-300 text-xl" icon="mdi:bell-outline"></iconify-icon>
+<iconify-icon class="text-amber-300 text-xl" icon="mdi:account-circle"></iconify-icon>
+</div>
+</header>
+<!-- 内容区 -->
+<main class="flex-1 overflow-y-auto hide-scrollbar">
+<!-- 活动列表页面 -->
+<div class="p-4" id="activity-list-page">
+<h2 class="font-serif font-bold text-xl text-chinese-red mb-4 text-center">活动中心</h2>
+<!-- 活动筛选 -->
+<div class="mb-6 bg-gradient-to-r from-amber-50 to-amber-100 p-3 rounded-xl">
+<div class="flex justify-between items-center">
+<div class="flex space-x-2">
+<button class="px-3 py-1 bg-chinese-red text-white text-xs rounded-full">全部活动</button>
+<button class="px-3 py-1 bg-white text-chinese-red text-xs rounded-full border border-chinese-red">即将开始</button>
+<button class="px-3 py-1 bg-white text-chinese-red text-xs rounded-full border border-chinese-red">进行中</button>
+</div>
+<iconify-icon class="text-chinese-red" icon="mdi:filter-variant"></iconify-icon>
+</div>
+</div>
+<!-- 活动卡片列表 -->
+<div class="space-y-4">
+<!-- 郁金香花海活动卡片 -->
+<div class="bg-white rounded-xl shadow-md overflow-hidden border border-amber-200 cursor-pointer activity-card" data-activity="tulip">
+<div class="h-36 bg-[url('https://s41.ax1x.com/2025/12/12/pZK4Css.jpg')] bg-cover bg-center relative">
+<div class="absolute top-2 right-2 bg-chinese-red text-white text-xs px-2 py-1 rounded-full">预约中</div>
+</div>
+<div class="p-3">
+<h3 class="font-bold text-chinese-red text-lg">郁金香花海活动</h3>
+<p class="text-xs text-gray-600 mt-1">德州财金集团</p>
+<p class="text-xs text-gray-700 mt-2 line-clamp-2">欢迎来到德州财金集团举办的郁金香花海节！本次活动主题为"免费游玩"，邀请您一同欣赏美丽的郁金香花海。</p>
+<div class="flex items-center justify-between mt-3 text-xs">
+<div class="flex items-center text-amber-500">
+<iconify-icon class="mr-1" icon="mdi:calendar"></iconify-icon>
+<span>2025-04-15 至 05-15</span>
+</div>
+<div class="flex items-center text-chinese-red">
+<iconify-icon class="mr-1" icon="mdi:ticket-confirmation"></iconify-icon>
+<span>立即预约</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 其他活动卡片1 -->
+<div class="bg-white rounded-xl shadow-md overflow-hidden border border-amber-200 cursor-pointer activity-card">
+<div class="h-36 bg-gradient-to-r from-deep-red to-chinese-red relative">
+<div class="absolute top-2 right-2 bg-amber-500 text-white text-xs px-2 py-1 rounded-full">即将开始</div>
+</div>
+<div class="p-3">
+<h3 class="font-bold text-chinese-red text-lg">财金文化节</h3>
+<p class="text-xs text-gray-600 mt-1">德州财金集团</p>
+<p class="text-xs text-gray-700 mt-2 line-clamp-2">探索财金文化的魅力，参与互动游戏赢取丰厚奖品，了解集团发展历程。</p>
+<div class="flex items-center justify-between mt-3 text-xs">
+<div class="flex items-center text-amber-500">
+<iconify-icon class="mr-1" icon="mdi:calendar"></iconify-icon>
+<span>2025-05-20 至 05-22</span>
+</div>
+<div class="flex items-center text-chinese-red">
+<iconify-icon class="mr-1" icon="mdi:ticket-confirmation"></iconify-icon>
+<span>即将开启</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 其他活动卡片2 -->
+<div class="bg-white rounded-xl shadow-md overflow-hidden border border-amber-200 cursor-pointer activity-card">
+<div class="h-36 bg-gradient-to-r from-amber-500 to-luxury-gold relative">
+<div class="absolute top-2 right-2 bg-gray-500 text-white text-xs px-2 py-1 rounded-full">已结束</div>
+</div>
+<div class="p-3">
+<h3 class="font-bold text-chinese-red text-lg">春季健步走</h3>
+<p class="text-xs text-gray-600 mt-1">德州财金集团</p>
+<p class="text-xs text-gray-700 mt-2 line-clamp-2">倡导健康生活方式，参与健步走活动赢取积分奖励，享受春日美景。</p>
+<div class="flex items-center justify-between mt-3 text-xs">
+<div class="flex items-center text-amber-500">
+<iconify-icon class="mr-1" icon="mdi:calendar"></iconify-icon>
+<span>2025-03-15 至 03-20</span>
+</div>
+<div class="flex items-center text-gray-500">
+<iconify-icon class="mr-1" icon="mdi:ticket-confirmation"></iconify-icon>
+<span>已结束</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- 底部导航栏 -->
+<nav class="h-20 bg-white border-t border-amber-300 flex justify-around items-center">
+<div class="text-center text-gray-400 cursor-pointer nav-item" data-page="home-page">
+<iconify-icon class="text-2xl block mx-auto" icon="mdi:home"></iconify-icon>
+<span class="text-xs mt-1">首页</span>
+</div>
+<div class="text-center text-chinese-red cursor-pointer nav-item" data-page="activity-page">
+<iconify-icon class="text-2xl block mx-auto" icon="mdi:calendar"></iconify-icon>
+<span class="text-xs mt-1">活动</span>
+</div>
+<div class="text-center text-gray-400 cursor-pointer nav-item" data-page="profile-page">
+<iconify-icon class="text-2xl block mx-auto" icon="mdi:account"></iconify-icon>
+<span class="text-xs mt-1">我的</span>
+</div>
+</nav>
+</div>
+<script>
+        // 返回按钮点击事件
+    document.getElementById('back-btn').addEventListener('click', function() {
+      window.location.href = '德州财金集团H5.html#activity-page';
+    });
+    // 页面切换功能
+    document.querySelectorAll('.nav-item').forEach(item => {
+      item.addEventListener('click', function() {
+        // 更新导航状态
+        document.querySelectorAll('.nav-item').forEach(nav => {
+          nav.classList.remove('text-chinese-red');
+          nav.classList.add('text-gray-400');
+        });
+        this.classList.remove('text-gray-400');
+        this.classList.add('text-chinese-red');
+        
+        // 切换页面
+        const pageId = this.dataset.page;
+        if (pageId === 'home-page') {
+          // 跳转到首页
+          window.location.href = '德州财金集团H5.html';
+        } else if (pageId === 'activity-page') {
+          // 跳转到活动页面
+          window.location.href = '德州财金集团H5.html#activity-page';
+        } else if (pageId === 'profile-page') {
+          // 跳转到我的页面
+          window.location.href = '德州财金集团H5.html#profile-page';
+        }
+      });
+    });
+
+    // 活动卡片点击事件
+    document.querySelectorAll('.activity-card').forEach(card => {
+      card.addEventListener('click', function() {
+        const activityType = this.dataset.activity;
+        if (activityType === 'tulip') {
+          // 设置访问权限
+          sessionStorage.setItem('allowAccessTulip', 'true');
+          // 跳转到郁金香花海页面
+          window.location.href = 'tulip-event.html';
+        }
+        // 其他活动可以在这里添加逻辑
+      });
+    });
+  </script>
+</body>
+</html>

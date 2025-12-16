@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>郁金香花海 - 德州财金集团</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<style>
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    @font-face {
+      font-family: 'SerifFont';
+      src: local('SimSun'), local('Songti SC');
+    }
+  </style>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'chinese-red': '#C42B1C',
+            'luxury-gold': '#D4AF37',
+            'deep-red': '#8B0000',
+            'cream-white': '#F8F4E9'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-amber-50 flex justify-center min-h-screen p-4">
+<div class="w-[375px] h-[812px] bg-white border-4 border-luxury-gold rounded-2xl shadow-2xl overflow-hidden flex flex-col">
+<!-- 顶部标题栏 -->
+<header class="h-14 bg-chinese-red flex items-center justify-between px-4">
+<div class="flex items-center">
+<iconify-icon class="text-amber-300 text-2xl" icon="mdi:chevron-left" id="back-btn"></iconify-icon>
+<!-- <span class="text-white font-serif font-bold text-xl ml-2">郁金香花海</span> -->
+</div>
+<div class="flex space-x-3">
+<iconify-icon class="text-amber-300 text-xl" icon="mdi:bell-outline"></iconify-icon>
+<iconify-icon class="text-amber-300 text-xl" icon="mdi:account-circle"></iconify-icon>
+</div>
+</header>
+
+<!-- 内容区 -->
+<main class="flex-1 overflow-y-auto hide-scrollbar">
+<!-- 活动轮播 -->
+<div class="mb-6 px-4">
+<div class="h-56 bg-[url('https://s41.ax1x.com/2025/12/12/pZK4Css.jpg')] bg-cover bg-center rounded-xl relative overflow-hidden">
+<div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+<div class="text-center text-white">
+<h3 class="font-bold text-2xl">郁金香花海节</h3>
+<p class="text-sm mt-1">免费游玩 · 积分兑换好礼</p>
+</div>
+</div>
+</div>
+<div class="flex justify-center mt-2">
+<div class="w-2 h-2 bg-chinese-red rounded-full mx-1"></div>
+<div class="w-2 h-2 bg-amber-200 rounded-full mx-1"></div>
+<div class="w-2 h-2 bg-amber-200 rounded-full mx-1"></div>
+</div>
+</div>
+
+<!-- 活动基本信息 -->
+<div class="px-4 mb-6">
+<div class="bg-gradient-to-r from-amber-50 to-amber-100 border border-amber-200 rounded-xl p-4">
+<h3 class="font-bold text-chinese-red mb-3">活动详情</h3>
+<div class="space-y-3 text-sm">
+<div class="flex items-center">
+<iconify-icon class="text-chinese-red mr-2" icon="mdi:calendar-clock"></iconify-icon>
+<span><strong>活动时间：</strong>2025年4月15日 - 5月15日</span>
+</div>
+<div class="flex items-center">
+<iconify-icon class="text-chinese-red mr-2" icon="mdi:map-marker"></iconify-icon>
+<span><strong>活动地点：</strong>德州市财金生态公园</span>
+</div>
+<div class="flex items-center">
+<iconify-icon class="text-chinese-red mr-2" icon="mdi:account-group"></iconify-icon>
+<span><strong>参与人数：</strong>限5000人</span>
+</div>
+<div class="flex items-center">
+<iconify-icon class="text-chinese-red mr-2" icon="mdi:ticket-confirmation"></iconify-icon>
+<span><strong>预约状态：</strong>预约中</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 活动介绍 -->
+<div class="px-4 mb-6">
+<div class="bg-gradient-to-r from-amber-50 to-amber-100 border border-amber-200 rounded-xl p-4">
+<h3 class="font-bold text-chinese-red mb-2">活动介绍</h3>
+<p class="text-sm text-gray-700 mb-3">
+欢迎来到德州财金集团举办的郁金香花海节！本次活动主题为"免费游玩"，邀请您一同欣赏美丽的郁金香花海。
+</p>
+<p class="text-sm text-gray-700">
+活动期间，您可以通过参与各种互动获得积分，积分可用于兑换精美礼品、抵扣消费或兑换水务等服务。
+现场将有专业摄影师为您拍摄美照，还有精彩的文艺表演和互动游戏等待您的参与。
+</p>
+</div>
+</div>
+
+<!-- 活动亮点 -->
+<div class="px-4 mb-6">
+<div class="bg-gradient-to-r from-amber-50 to-amber-100 border border-amber-200 rounded-xl p-4">
+<h3 class="font-bold text-chinese-red mb-3">活动亮点</h3>
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-white rounded-lg p-3 shadow-sm">
+<iconify-icon class="text-chinese-red text-2xl mb-1" icon="mdi:flower-tulip"></iconify-icon>
+<p class="text-xs text-gray-700">百万郁金香花海</p>
+</div>
+<div class="bg-white rounded-lg p-3 shadow-sm">
+<iconify-icon class="text-chinese-red text-2xl mb-1" icon="mdi:camera"></iconify-icon>
+<p class="text-xs text-gray-700">专业摄影服务</p>
+</div>
+<div class="bg-white rounded-lg p-3 shadow-sm">
+<iconify-icon class="text-chinese-red text-2xl mb-1" icon="mdi:music"></iconify-icon>
+<p class="text-xs text-gray-700">精彩文艺表演</p>
+</div>
+<div class="bg-white rounded-lg p-3 shadow-sm">
+<iconify-icon class="text-chinese-red text-2xl mb-1" icon="mdi:gift"></iconify-icon>
+<p class="text-xs text-gray-700">积分兑换好礼</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 预约表单 -->
+<div class="px-4 mb-6">
+<div class="bg-gradient-to-r from-amber-50 to-amber-100 border border-amber-200 rounded-xl p-4">
+<h3 class="font-bold text-chinese-red mb-3">活动预约</h3>
+<form class="space-y-3">
+<div>
+<label class="block text-sm font-bold text-chinese-red mb-1">姓名</label>
+<input type="text" class="w-full px-3 py-2 border border-amber-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-chinese-red" placeholder="请输入您的姓名">
+</div>
+<div>
+<label class="block text-sm font-bold text-chinese-red mb-1">手机号</label>
+<input type="tel" class="w-full px-3 py-2 border border-amber-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-chinese-red" placeholder="请输入您的手机号">
+</div>
+<div>
+<label class="block text-sm font-bold text-chinese-red mb-1">预约日期</label>
+<input type="date" class="w-full px-3 py-2 border border-amber-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-chinese-red">
+</div>
+<div>
+<label class="block text-sm font-bold text-chinese-red mb-1">同行人数</label>
+<select class="w-full px-3 py-2 border border-amber-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-chinese-red">
+<option value="1">1人</option>
+<option value="2">2人</option>
+<option value="3">3人</option>
+<option value="4">4人</option>
+<option value="5+">5人以上</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-bold text-chinese-red mb-1">备注信息</label>
+<textarea class="w-full px-3 py-2 border border-amber-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-chinese-red" rows="3" placeholder="请输入备注信息（可选）"></textarea>
+</div>
+<button type="submit" class="w-full bg-chinese-red text-white font-bold py-2 px-4 rounded-lg hover:bg-deep-red transition-colors duration-200">
+立即预约
+</button>
+</form>
+</div>
+</div>
+<!-- 扫码关注区域 -->
+<div class="px-4 mb-6">
+<div class="bg-gradient-to-r from-amber-50 to-amber-100 border border-amber-200 rounded-xl p-4 text-center">
+<h3 class="font-bold text-chinese-red mb-3">扫码关注 获得更多福利</h3>
+<div class="flex justify-center mb-3">
+<div class="w-40 h-40 bg-white border-2 border-chinese-red rounded-lg flex items-center justify-center overflow-hidden">
+<img src="https://img.lenyiin.com/image/2025/12/13/141412.webp" alt="扫码关注" class="w-full h-full object-cover">
+</div>
+</div>
+<p class="text-sm text-gray-700">
+扫码关注德州财金集团公众号，获取更多活动信息和专属福利
+</p>
+<div class="mt-3 flex justify-center">
+<iconify-icon class="text-3xl text-chinese-red mx-2" icon="mdi:wechat"></iconify-icon>
+<iconify-icon class="text-3xl text-chinese-red mx-2" icon="mdi:qq"></iconify-icon>
+<iconify-icon class="text-3xl text-chinese-red mx-2" icon="mdi:weibo"></iconify-icon>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+<script>
+    // 检查是否通过活动列表页进入
+    if (!sessionStorage.getItem('allowAccessTulip')) {
+        window.location.href = '德州财金集团H5.html';
+    }
+    
+    // 返回按钮事件
+    document.getElementById('back-btn').addEventListener('click', function() {
+            window.location.href = '德州财金集团H5.html#activity-page';
+    });
+    
+    // 表单提交事件
+    document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('预约成功！我们将尽快与您联系。');
+        window.location.href = '德州财金集团H5.html';
+    });
+</script>
+</body>
+</html>

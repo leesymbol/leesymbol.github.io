@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>农产品购买 - 德州财金集团</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<style>
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    @font-face {
+      font-family: 'SerifFont';
+      src: local('SimSun'), local('Songti SC');
+    }
+  </style>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'chinese-red': '#C42B1C',
+            'luxury-gold': '#D4AF37',
+            'deep-red': '#8B0000',
+            'cream-white': '#F8F4E9'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-amber-50 flex justify-center items-center min-h-screen p-4">
+<div class="w-[375px] h-[812px] bg-white border-4 border-luxury-gold rounded-2xl shadow-2xl overflow-hidden flex flex-col">
+<!-- 顶部标题栏 -->
+<header class="h-14 bg-chinese-red flex items-center justify-between px-4">
+<div class="flex items-center">
+<iconify-icon class="text-amber-300 text-2xl cursor-pointer" icon="mdi:chevron-left" id="back-btn"></iconify-icon>
+<iconify-icon class="text-amber-300 text-2xl ml-2" icon="mdi:bank"></iconify-icon>
+<span class="text-white font-serif font-bold text-xl ml-2">德州财金集团</span>
+</div>
+<div class="flex space-x-3">
+<iconify-icon class="text-amber-300 text-xl" icon="mdi:bell-outline"></iconify-icon>
+<iconify-icon class="text-amber-300 text-xl" icon="mdi:account-circle"></iconify-icon>
+</div>
+</header>
+<!-- 内容区 -->
+<main class="flex-1 overflow-y-auto hide-scrollbar">
+<!-- 农产品购买页面 -->
+<div class="p-4" id="agriculture-page">
+<h2 class="font-serif font-bold text-xl text-chinese-red mb-4 text-center">农产品购买</h2>
+
+<!-- 搜索栏 -->
+<section class="mb-4">
+<div class="relative">
+<input type="text" placeholder="搜索农产品..." class="w-full pl-10 pr-4 py-2 border border-amber-300 rounded-full focus:outline-none focus:ring-2 focus:ring-chinese-red">
+<iconify-icon class="absolute left-3 top-1/2 transform -translate-y-1/2 text-chinese-red" icon="mdi:magnify"></iconify-icon>
+</div>
+</section>
+
+<!-- 分类导航 -->
+<section class="mb-4">
+<div class="flex overflow-x-auto hide-scrollbar space-x-4 pb-2">
+<button class="px-4 py-1 bg-chinese-red text-white rounded-full text-sm font-bold">全部</button>
+<button class="px-4 py-1 bg-amber-50 text-chinese-red border border-amber-300 rounded-full text-sm font-bold">蔬菜</button>
+<button class="px-4 py-1 bg-amber-50 text-chinese-red border border-amber-300 rounded-full text-sm font-bold">水果</button>
+<button class="px-4 py-1 bg-amber-50 text-chinese-red border border-amber-300 rounded-full text-sm font-bold">粮油</button>
+<button class="px-4 py-1 bg-amber-50 text-chinese-red border border-amber-300 rounded-full text-sm font-bold">肉类</button>
+<button class="px-4 py-1 bg-amber-50 text-chinese-red border border-amber-300 rounded-full text-sm font-bold">蛋类</button>
+</div>
+</section>
+
+<!-- 农产品列表 -->
+<section class="mb-6">
+<h3 class="font-bold text-chinese-red mb-3">热门农产品</h3>
+<div class="grid grid-cols-2 gap-3">
+<!-- 农产品1 -->
+<div class="bg-white border border-amber-200 rounded-xl overflow-hidden shadow-sm">
+<div class="h-32 bg-gradient-to-b from-amber-50 to-amber-100 flex items-center justify-center">
+<iconify-icon class="text-amber-500 text-4xl" icon="mdi:corn"></iconify-icon>
+</div>
+<div class="p-3">
+<h4 class="font-bold text-sm text-chinese-red mb-1">德州有机玉米</h4>
+<div class="flex justify-between items-center mb-2">
+<span class="text-xs text-gray-600">500g</span>
+<span class="text-sm font-bold text-chinese-red">¥5.99</span>
+</div>
+<button class="w-full bg-chinese-red text-white text-xs font-bold py-1 px-2 rounded-lg">立即购买</button>
+</div>
+</div>
+
+<!-- 农产品2 -->
+<div class="bg-white border border-amber-200 rounded-xl overflow-hidden shadow-sm">
+<div class="h-32 bg-gradient-to-b from-amber-50 to-amber-100 flex items-center justify-center">
+<iconify-icon class="text-red-500 text-4xl" icon="mdi:apple"></iconify-icon>
+</div>
+<div class="p-3">
+<h4 class="font-bold text-sm text-chinese-red mb-1">烟台红富士苹果</h4>
+<div class="flex justify-between items-center mb-2">
+<span class="text-xs text-gray-600">1.5kg</span>
+<span class="text-sm font-bold text-chinese-red">¥19.90</span>
+</div>
+<button class="w-full bg-chinese-red text-white text-xs font-bold py-1 px-2 rounded-lg">立即购买</button>
+</div>
+</div>
+
+<!-- 农产品3 -->
+<div class="bg-white border border-amber-200 rounded-xl overflow-hidden shadow-sm">
+<div class="h-32 bg-gradient-to-b from-amber-50 to-amber-100 flex items-center justify-center">
+<iconify-icon class="text-green-500 text-4xl" icon="mdi:lettuce"></iconify-icon>
+</div>
+<div class="p-3">
+<h4 class="font-bold text-sm text-chinese-red mb-1">新鲜生菜</h4>
+<div class="flex justify-between items-center mb-2">
+<span class="text-xs text-gray-600">300g</span>
+<span class="text-sm font-bold text-chinese-red">¥3.99</span>
+</div>
+<button class="w-full bg-chinese-red text-white text-xs font-bold py-1 px-2 rounded-lg">立即购买</button>
+</div>
+</div>
+
+<!-- 农产品4 -->
+<div class="bg-white border border-amber-200 rounded-xl overflow-hidden shadow-sm">
+<div class="h-32 bg-gradient-to-b from-amber-50 to-amber-100 flex items-center justify-center">
+<iconify-icon class="text-yellow-500 text-4xl" icon="mdi:egg"></iconify-icon>
+</div>
+<div class="p-3">
+<h4 class="font-bold text-sm text-chinese-red mb-1">散养土鸡蛋</h4>
+<div class="flex justify-between items-center mb-2">
+<span class="text-xs text-gray-600">30枚</span>
+<span class="text-sm font-bold text-chinese-red">¥35.90</span>
+</div>
+<button class="w-full bg-chinese-red text-white text-xs font-bold py-1 px-2 rounded-lg">立即购买</button>
+</div>
+</div>
+
+<!-- 农产品5 -->
+<div class="bg-white border border-amber-200 rounded-xl overflow-hidden shadow-sm">
+<div class="h-32 bg-gradient-to-b from-amber-50 to-amber-100 flex items-center justify-center">
+<iconify-icon class="text-amber-600 text-4xl" icon="mdi:bread-slice"></iconify-icon>
+</div>
+<div class="p-3">
+<h4 class="font-bold text-sm text-chinese-red mb-1">全麦面包</h4>
+<div class="flex justify-between items-center mb-2">
+<span class="text-xs text-gray-600">400g</span>
+<span class="text-sm font-bold text-chinese-red">¥12.90</span>
+</div>
+<button class="w-full bg-chinese-red text-white text-xs font-bold py-1 px-2 rounded-lg">立即购买</button>
+</div>
+</div>
+
+<!-- 农产品6 -->
+<div class="bg-white border border-amber-200 rounded-xl overflow-hidden shadow-sm">
+<div class="h-32 bg-gradient-to-b from-amber-50 to-amber-100 flex items-center justify-center">
+<iconify-icon class="text-purple-500 text-4xl" icon="mdi:grapes"></iconify-icon>
+</div>
+<div class="p-3">
+<h4 class="font-bold text-sm text-chinese-red mb-1">新鲜葡萄</h4>
+<div class="flex justify-between items-center mb-2">
+<span class="text-xs text-gray-600">1kg</span>
+<span class="text-sm font-bold text-chinese-red">¥15.99</span>
+</div>
+<button class="w-full bg-chinese-red text-white text-xs font-bold py-1 px-2 rounded-lg">立即购买</button>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 推荐农产品 -->
+<section class="mb-6">
+<h3 class="font-bold text-chinese-red mb-3">为您推荐</h3>
+<div class="bg-white border border-amber-200 rounded-xl overflow-hidden shadow-sm">
+<div class="p-3">
+<div class="flex items-center mb-2">
+<div class="w-16 h-16 bg-gradient-to-b from-amber-50 to-amber-100 rounded-lg flex items-center justify-center mr-3">
+<iconify-icon class="text-amber-600 text-2xl" icon="mdi:wheat"></iconify-icon>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-sm text-chinese-red">德州小米</h4>
+<div class="flex justify-between items-center">
+<span class="text-xs text-gray-600">2.5kg</span>
+<span class="text-sm font-bold text-chinese-red">¥29.90</span>
+</div>
+</div>
+</div>
+<p class="text-xs text-gray-600 mb-3">产自德州本地优质小米，颗粒饱满，营养丰富，适合熬粥食用。</p>
+<button class="w-full bg-chinese-red text-white text-xs font-bold py-1 px-2 rounded-lg">立即购买</button>
+</div>
+</div>
+</section>
+
+<!-- 购物车摘要 -->
+<section class="mb-6 fixed bottom-20 left-1/2 transform -translate-x-1/2 w-[355px] p-3 bg-white border border-amber-200 rounded-xl shadow-lg">
+<div class="flex justify-between items-center mb-2">
+<h3 class="font-bold text-chinese-red">购物车</h3>
+<span class="text-xs bg-chinese-red text-white px-2 py-1 rounded-full">3件商品</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-sm font-bold">合计：</span>
+<span class="text-lg font-bold text-chinese-red">¥68.87</span>
+</div>
+<button class="w-full bg-chinese-red text-white font-bold py-2 px-4 rounded-lg mt-2">去结算</button>
+</section>
+</div>
+</main>
+<!-- 底部导航栏 -->
+<nav class="h-20 bg-white border-t border-amber-300 flex justify-around items-center">
+<div class="text-center text-gray-400 cursor-pointer nav-item" data-page="home">
+<iconify-icon class="text-2xl block mx-auto" icon="mdi:home"></iconify-icon>
+<span class="text-xs mt-1">首页</span>
+</div>
+<div class="text-center text-gray-400 cursor-pointer nav-item" data-page="activity">
+<iconify-icon class="text-2xl block mx-auto" icon="mdi:calendar"></iconify-icon>
+<span class="text-xs mt-1">活动</span>
+</div>
+<div class="text-center text-gray-400 cursor-pointer nav-item" data-page="profile">
+<iconify-icon class="text-2xl block mx-auto" icon="mdi:account"></iconify-icon>
+<span class="text-xs mt-1">我的</span>
+</div>
+</nav>
+</div>
+<script>
+    // 返回按钮点击事件
+    document.getElementById('back-btn').addEventListener('click', function() {
+          window.location.href = '德州财金集团H5.html#activity-page';
+    });
+    
+    // 页面切换功能 - 跳转到主页面对应模块
+    document.querySelectorAll('.nav-item').forEach(item => {
+      item.addEventListener('click', function() {
+        const pageType = this.dataset.page;
+        if (pageType === 'home') {
+          window.location.href = '德州财金集团H5.html#home';
+        } else if (pageType === 'activity') {
+          window.location.href = '德州财金集团H5.html#activity';
+        } else if (pageType === 'profile') {
+          window.location.href = '德州财金集团H5.html#profile';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
