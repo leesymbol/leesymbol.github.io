@@ -194,19 +194,19 @@
 <script>
     // 检查是否通过活动列表页进入
     if (!sessionStorage.getItem('allowAccessTulip')) {
-        window.location.href = '德州财金集团H5.html';
+        window.location.href = 'index.html';
     }
     
     // 返回按钮事件
     document.getElementById('back-btn').addEventListener('click', function() {
-            window.location.href = '德州财金集团H5.html#activity-page';
+            window.location.href = 'index.html#activity-page';
     });
     
     // 表单提交事件
     document.querySelector('form').addEventListener('submit', function(e) {
         e.preventDefault();
         alert('预约成功！我们将尽快与您联系。');
-        window.location.href = '德州财金集团H5.html';
+        window.location.href = 'index.html';
     });
 </script>
 </body>
