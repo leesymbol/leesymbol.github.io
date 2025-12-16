@@ -59,8 +59,8 @@
 <!-- <iconify-icon class="text-amber-500 text-4xl" icon="mdi:bank"></iconify-icon> -->
  <img src="https://s21.ax1x.com/2024/10/12/pAYaIyR.png" alt="扫码关注" class="w-12 h-12 rounded-full">
 <div class="ml-2 text-center">
-<h1 class="font-serif font-bold text-2xl text-chinese-red">德州财金集团</h1>
-<p class="text-amber-500 text-xs">DEZHOU FINANCE GROUP</p>
+<h1 class="font-serif font-bold text-2xl text-chinese-red" style="font-size: 25px;">德州财金集团</h1>
+<p class="text-amber-500" style="font-size: 10px;">Dezhou Financial Investment Holding Group Limited</p>
 </div>
 </div>
 </div>
@@ -165,14 +165,14 @@
 <iconify-icon class="text-chinese-red text-2xl mx-auto" icon="mdi:calendar-clock"></iconify-icon>
 <p class="text-xs mt-1">活动预约</p>
 </div>
-<!-- <div class="bg-amber-50 border border-amber-200 rounded-lg p-2 text-center cursor-pointer" id="water-event-btn">
+<div class="bg-amber-50 border border-amber-200 rounded-lg p-2 text-center cursor-pointer" id="water-event-btn">
 <iconify-icon class="text-chinese-red text-2xl mx-auto" icon="mdi:water"></iconify-icon>
 <p class="text-xs mt-1">水费缴纳</p>
-</div> -->
-<!-- <div class="bg-amber-50 border border-amber-200 rounded-lg p-2 text-center cursor-pointer" id="food-event-btn">
+</div>
+<div class="bg-amber-50 border border-amber-200 rounded-lg p-2 text-center cursor-pointer" id="food-event-btn">
 <iconify-icon class="text-chinese-red text-2xl mx-auto" icon="mdi:fruit-watermelon"></iconify-icon>
 <p class="text-xs mt-1">农产品购买</p>
-</div> -->
+</div>
 <div class="bg-amber-50 border border-amber-200 rounded-lg p-2 text-center cursor-pointer" id="deyungou-tulip-event-btn">
 <iconify-icon class="text-chinese-red text-2xl mx-auto" icon="mdi:shopping"></iconify-icon>
 <p class="text-xs mt-1">德云购</p>
@@ -569,12 +569,14 @@
       }
       
       // 水费缴纳
-      // const waterBillBtn = document.querySelector('#activity-page .grid.grid-cols-3 > div:nth-child(3)');
-      // if (waterBillBtn) {
-      //   waterBillBtn.addEventListener('click', function() {
-      //     window.location.href = 'water-bill.html';
-      //   });
-      // }
+      const waterBillBtn = document.querySelector('#activity-page .grid.grid-cols-3 > div:nth-child(3)');
+      if (waterBillBtn) {
+        waterBillBtn.addEventListener('click', function() {
+          // window.location.href = 'water-bill.html';
+          // window.location.href = 'water-bill.html';
+          window.location.href = 'http://wx.dzgsgs.com/sddzwx/wx_pay.php?mid=VCX_2_0';
+        });
+      }
       
       // 农产品购买
       // const agricultureBtn = document.querySelector('#activity-page .grid.grid-cols-3 > div:nth-child(4)');
