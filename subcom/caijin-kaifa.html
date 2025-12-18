@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>财金开发 - 德州财金集团</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<style>
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    @font-face {
+      font-family: 'SerifFont';
+      src: local('SimSun'), local('Songti SC');
+    }
+  </style>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'chinese-red': '#C42B1C',
+            'luxury-gold': '#D4AF37',
+            'deep-red': '#8B0000',
+            'cream-white': '#F8F4E9'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-amber-50 flex justify-center items-center min-h-screen p-4">
+<div class="w-[375px] h-[812px] bg-white border-4 border-luxury-gold rounded-2xl shadow-2xl overflow-hidden flex flex-col">
+<!-- 顶部标题栏 -->
+<header class="h-14 bg-chinese-red flex items-center justify-between px-4">
+<div class="flex items-center">
+<iconify-icon class="text-amber-300 text-2xl cursor-pointer" icon="mdi:chevron-left" id="back-btn"></iconify-icon>
+<span class="text-white font-serif font-bold text-xl ml-2">德州财金集团</span>
+</div>
+<div class="flex space-x-3">
+<iconify-icon class="text-amber-300 text-xl" icon="mdi:bell-outline"></iconify-icon>
+<iconify-icon class="text-amber-300 text-xl" icon="mdi:account-circle"></iconify-icon>
+</div>
+</header>
+
+<!-- 内容区 -->
+<main class="flex-1 overflow-y-auto hide-scrollbar">
+<div class="p-4">
+<!-- 页面标题 -->
+<h2 class="font-serif font-bold text-2xl text-chinese-red mb-6 text-center">财金开发</h2>
+
+<!-- 财金开发 -->
+<section class="mb-8">
+<div class="bg-gradient-to-r from-amber-50 to-amber-100 border border-amber-200 rounded-xl p-4">
+<h3 class="font-serif font-bold text-xl text-chinese-red mb-4 flex items-center">
+<iconify-icon class="text-amber-500 text-2xl mr-2" icon="mdi:home-city"></iconify-icon>
+财金开发
+</h3>
+<div class="space-y-4">
+<!-- 微信公众号 -->
+<div class="flex items-center justify-between bg-white rounded-lg p-3 shadow-sm" onclick="window.location.href='https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzkyMDU5NTUzNg==&scene=124#wechat_redirect'">
+<div class="flex items-center">
+<iconify-icon class="text-green-600 text-2xl mr-3" icon="mdi:wechat"></iconify-icon>
+<div>
+<h4 class="font-bold text-chinese-red">微信公众号</h4>
+<p class="text-xs text-gray-600">财金开发官方公众号</p>
+</div>
+</div>
+<iconify-icon class="text-gray-400" icon="mdi:chevron-right"></iconify-icon>
+</div>
+
+<!-- 官网 -->
+<div class="flex items-center justify-between bg-white rounded-lg p-3 shadow-sm" onclick="window.location.href='http://www.caijinkaifa.com'">
+<div class="flex items-center">
+<iconify-icon class="text-blue-600 text-2xl mr-3" icon="mdi:web"></iconify-icon>
+<div>
+<h4 class="font-bold text-chinese-red">官方网站</h4>
+<p class="text-xs text-gray-600">www.caijinkaifa.com</p>
+</div>
+</div>
+<iconify-icon class="text-gray-400" icon="mdi:chevron-right"></iconify-icon>
+</div>
+
+<!-- 抖音 -->
+<div class="flex items-center justify-between bg-white rounded-lg p-3 shadow-sm">
+<div class="flex items-center">
+<img src="https://s41.ax1x.com/2025/12/18/pZ1SYkV.png" alt="扫码关注" class="w-6 h-6 " style="margin-right: 15px;"/>
+<div>
+<h4 class="font-bold text-chinese-red">抖音平台</h4>
+<p class="text-xs text-gray-600">财金开发官方抖音</p>
+</div>
+</div>
+<iconify-icon class="text-gray-400" icon="mdi:chevron-right"></iconify-icon>
+</div>
+</div>
+</div>
+</section>
+
+</div>
+</main>
+
+
+</div>
+<script>
+    document.getElementById('back-btn').addEventListener('click', function() {
+        window.location.href = '../index.html';
+    });
+</script>
+</body>
+</html>
