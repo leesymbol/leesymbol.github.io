@@ -182,7 +182,7 @@
                     <div class="bg-white border border-amber-200 rounded-xl p-4">
                         <div class="flex justify-between items-center mb-3">
                             <span class="text-gray-600">当前积分</span>
-                            <span class="text-2xl font-bold text-chinese-red">1,250</span>
+                            <span class="text-2xl font-bold text-chinese-red">1250</span>
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-gray-600">积分可用于</span>
@@ -214,22 +214,106 @@
     </div>
     
     <script>
-                // 返回按钮点击事件
+        // 返回按钮点击事件
         document.getElementById('back-btn').addEventListener('click', function() {
-                 window.location.href = 'index.html#activity-page';
+            window.location.href = 'index.html#activity-page';
         });
+
+        // 初始化数据 - 使用localStorage持久化存储
+        let totalPoints = localStorage.getItem('totalPoints') ? parseInt(localStorage.getItem('totalPoints')) : 1250;
+        let consecutiveCheckInDays = localStorage.getItem('consecutiveCheckInDays') ? parseInt(localStorage.getItem('consecutiveCheckInDays')) : 7;
+        let lastCheckInDate = localStorage.getItem('lastCheckInDate');
+
+        // 更新积分显示
+        function updatePointsDisplay() {
+            const pointsElement = document.querySelector('span.text-2xl.font-bold.text-chinese-red');
+            pointsElement.textContent = totalPoints.toLocaleString();
+        }
+
+        // 更新连续签到天数显示
+        function updateConsecutiveDaysDisplay() {
+            const consecutiveDaysElement = document.querySelector('.bg-gradient-to-r.from-chinese-red.to-amber-700 span.text-amber-300');
+            consecutiveDaysElement.textContent = `已连续签到 ${consecutiveCheckInDays} 天`;
+        }
+
+        // 检查是否已签到
+        function checkIfCheckedInToday() {
+            const todayString = new Date().toDateString();
+            const checkInBtn = document.getElementById('check-in-btn');
+            
+            if (lastCheckInDate === todayString) {
+                // 已签到：禁用按钮
+                checkInBtn.disabled = true;
+                checkInBtn.textContent = '今日已签到';
+                checkInBtn.classList.add('opacity-70', 'cursor-not-allowed');
+            } else {
+                // 未签到：启用按钮
+                checkInBtn.disabled = false;
+                checkInBtn.textContent = '立即签到';
+                checkInBtn.classList.remove('opacity-70', 'cursor-not-allowed');
+            }
+        }
 
         // 签到按钮点击事件
         document.getElementById('check-in-btn').addEventListener('click', function() {
-            alert('签到成功！获得5积分');
+            if (this.disabled) return; // 防止重复点击
+            
+            const today = new Date();
+            const todayString = today.toDateString();
+            let pointsEarned = 2; // 基础积分
+
+            // 检查是否是连续签到
+            if (lastCheckInDate) {
+                const lastDate = new Date(lastCheckInDate);
+                const dayDiff = Math.floor((today - lastDate) / (1000 * 60 * 60 * 24));
+                
+                if (dayDiff === 1) {
+                    // 连续签到，增加天数
+                    consecutiveCheckInDays++;
+                    
+                    // 连续签到7天额外奖励
+                    if (consecutiveCheckInDays % 7 === 0) {
+                        pointsEarned += 10;
+                    }
+                } else {
+                    // 中断签到，重置连续签到天数
+                    consecutiveCheckInDays = 1;
+                }
+            } else {
+                // 首次签到
+                consecutiveCheckInDays = 1;
+            }
+
+            // 更新积分
+            totalPoints += pointsEarned;
+
+            // 持久化存储
+            localStorage.setItem('totalPoints', totalPoints);
+            localStorage.setItem('consecutiveCheckInDays', consecutiveCheckInDays);
+            localStorage.setItem('lastCheckInDate', todayString);
+
+            // 更新界面
+            updatePointsDisplay();
+            updateConsecutiveDaysDisplay();
+            checkIfCheckedInToday();
+
+            // 显示成功提示
+            alert(`签到成功！获${pointsEarned}积分`);
         });
-        
+
         // 导航栏点击事件 - 跳转到主页面对应模块
         document.querySelectorAll('.nav-item').forEach(item => {
             item.addEventListener('click', function() {
                 const page = this.dataset.page;
                 window.location.href = `index.html#${page}`;
             });
+        });
+
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            updatePointsDisplay();
+            updateConsecutiveDaysDisplay();
+            checkIfCheckedInToday();
         });
     </script>
 </body>
